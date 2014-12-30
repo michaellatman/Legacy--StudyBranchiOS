@@ -39,13 +39,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender {
-    
+- (IBAction)insertObject:(id)sender {
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"New Assignment" message:@"This is an example alert!" delegate:self cancelButtonTitle:@"Hide" otherButtonTitles:nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alert show];
- 
+    
 }
+
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
@@ -74,8 +74,15 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setDetailItem:object];
+        AssignmentDetailViewController *detailController = [[segue destinationViewController] topViewController];
+        [detailController setManagedObjectContext:self.managedObjectContext];
+        [detailController setDetailItem:object];
     }
+    if ([[segue identifier] isEqualToString:@"create"]) {
+        AssignmentDetailViewController *detailController = [[segue destinationViewController] topViewController];
+        [detailController setManagedObjectContext:self.managedObjectContext];
+    }
+
 }
 
 #pragma mark - Table View
@@ -221,5 +228,6 @@
     [self.tableView reloadData];
 }
  */
+
 
 @end

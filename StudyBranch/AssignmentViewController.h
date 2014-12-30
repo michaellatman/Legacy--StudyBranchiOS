@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+- (IBAction)insertObject:(id)sender;
 
 
 @end

@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 Michael Latman. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <XLForm/XLFormViewController.h>
+#import <CoreData/CoreData.h>
 
-@interface AssignmentDetailViewController : UIViewController
+@interface AssignmentDetailViewController : XLFormViewController
 
 @property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end
 
