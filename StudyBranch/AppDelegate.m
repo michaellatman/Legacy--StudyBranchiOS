@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "DetailViewController.h"
-#import "MasterViewController.h"
-
+#import "AssignmentViewController.h"
+#import "RootViewController.h"
+#import <RESideMenu/RESideMenu.h>
 @interface AppDelegate ()
 
 @end
@@ -19,9 +19,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    
+    //Our view controller
+    RootViewController *rootViewController = (RootViewController *)self.window.rootViewController;
+    UINavigationController *controller = rootViewController.contentViewController;
+    AssignmentViewController *mainView = (AssignmentViewController*)controller.topViewController;
+    mainView.managedObjectContext = self.managedObjectContext;
+    //rootView.backgroundImage = [UIImage imageNamed:@"background"];
+    //self.window.rootViewController = navigationController;
     return YES;
 }
 

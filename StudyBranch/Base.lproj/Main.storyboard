@@ -1,13 +1,160 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5hI-wV-M7E">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="UQA-nb-N1p">
+            <objects>
+                <viewController id="5hI-wV-M7E" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9J0-RR-WV3"/>
+                        <viewControllerLayoutGuide type="bottom" id="4jF-Zd-Wdh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sz9-4C-gHw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.13725490870000001" green="0.77647066119999997" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="contentViewStoryboardID" value="assignmentsViewController"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="olL-lw-GwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1053" y="57"/>
+        </scene>
+        <!--dwa-->
+        <scene sceneID="Vh6-aW-lBR">
+            <objects>
+                <viewController title="dwa" id="OXK-Cg-zsB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gMW-Sd-x7b"/>
+                        <viewControllerLayoutGuide type="bottom" id="rvd-dC-GxX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vb3-xc-Nzd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rHc-0z-LSA">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <color key="backgroundColor" red="0.98468501984126988" green="0.98468501984126988" blue="0.98468501984126988" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rHc-0z-LSA" firstAttribute="top" secondItem="gMW-Sd-x7b" secondAttribute="bottom" constant="60" id="1af-rx-g2D"/>
+                            <constraint firstItem="rHc-0z-LSA" firstAttribute="trailing" secondItem="vb3-xc-Nzd" secondAttribute="trailingMargin" id="5hO-aH-fzZ"/>
+                            <constraint firstItem="rHc-0z-LSA" firstAttribute="leading" secondItem="vb3-xc-Nzd" secondAttribute="leadingMargin" id="ax5-sQ-TLk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="rHc-0z-LSA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1af-rx-g2D"/>
+                                <exclude reference="5hO-aH-fzZ"/>
+                                <exclude reference="ax5-sQ-TLk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="rHc-0z-LSA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1af-rx-g2D"/>
+                                <include reference="5hO-aH-fzZ"/>
+                                <include reference="ax5-sQ-TLk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ByZ-5y-P5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604.5" y="702"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="OpS-yd-tmB">
+            <objects>
+                <viewController storyboardIdentifier="menuViewController" id="0m3-S5-K2T" customClass="NavigationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="esJ-fL-kJw"/>
+                        <viewControllerLayoutGuide type="bottom" id="7qQ-dd-1RI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q3c-iV-hYl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="StudyBranchLogo-bw" translatesAutoresizingMaskIntoConstraints="NO" id="FMt-a1-L7s">
+                                <rect key="frame" x="200" y="28" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="V0r-Ux-yKg"/>
+                                    <constraint firstAttribute="width" constant="200" id="X2E-KJ-Cui"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="V0r-Ux-yKg"/>
+                                        <exclude reference="X2E-KJ-Cui"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="100" y="478" width="200" height="50"/>
+                                    <mask key="constraints">
+                                        <include reference="V0r-Ux-yKg"/>
+                                        <include reference="X2E-KJ-Cui"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="300" y="28" width="200" height="50"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549830000001" green="0.68627452850000004" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="7qQ-dd-1RI" firstAttribute="top" secondItem="FMt-a1-L7s" secondAttribute="bottom" constant="35" id="Sfo-dx-lJO"/>
+                            <constraint firstAttribute="centerX" secondItem="FMt-a1-L7s" secondAttribute="centerX" id="WNv-us-5hg"/>
+                            <constraint firstItem="7qQ-dd-1RI" firstAttribute="top" secondItem="FMt-a1-L7s" secondAttribute="bottom" constant="8" id="tBd-dw-fgs"/>
+                            <constraint firstItem="7qQ-dd-1RI" firstAttribute="top" secondItem="FMt-a1-L7s" secondAttribute="bottom" constant="49" id="tVy-vk-JQw">
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WNv-us-5hg"/>
+                                <exclude reference="tVy-vk-JQw"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="WNv-us-5hg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Sfo-dx-lJO"/>
+                                <exclude reference="tBd-dw-fgs"/>
+                                <include reference="tVy-vk-JQw"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvs-ha-Os9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1776" y="63.75"/>
+        </scene>
         <!--Master-->
         <scene sceneID="cUi-kZ-frf">
             <objects>
-                <navigationController title="Master" id="rS3-R9-Ivy" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="assignmentsViewController" title="Master" id="rS3-R9-Ivy" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -19,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="-148" y="64"/>
         </scene>
-        <!--Master-->
+        <!--AssignmentViewController-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
-                <tableViewController title="Master" id="pGg-6v-bdr" customClass="MasterViewController" customModuleProvider="" sceneMemberID="viewController">
+                <tableViewController title="AssignmentViewController" id="pGg-6v-bdr" customClass="AssignmentViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,16 +203,22 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="Assignments" id="tQt-TN-PWz">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="hsE-js-vwv">
+                            <connections>
+                                <segue destination="OXK-Cg-zsB" kind="show" id="9ld-YT-lRh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="64"/>
+            <point key="canvasLocation" x="604.5" y="48.75"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
-                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="DetailViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="AssignmentDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
                         <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
@@ -99,4 +252,7 @@
             <point key="canvasLocation" x="1343" y="64"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="StudyBranchLogo-bw" width="600" height="132"/>
+    </resources>
 </document>

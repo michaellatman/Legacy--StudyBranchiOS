@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Michael Latman. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "AssignmentDetailViewController.h"
 
-@interface DetailViewController ()
+@interface AssignmentDetailViewController ()
 
 @end
 
-@implementation DetailViewController
+@implementation AssignmentDetailViewController
 
 #pragma mark - Managing the detail item
 
@@ -28,7 +28,7 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"name"] description];
     }
 }
 
